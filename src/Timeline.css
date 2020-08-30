@@ -1,0 +1,27 @@
+/* the timeline container */
+.Timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 5em auto;
+  padding: 0;
+}
+
+/* the actual timeline (the vertical ruler) */
+.Timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: -5em;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* place the timelime to the left */
+  .Timeline::after {
+    left: 31px;
+  }
+}
