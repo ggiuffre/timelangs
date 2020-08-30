@@ -29,13 +29,11 @@
   background-color: white;
   padding: 1%;
   margin: 1%;
-  border-color: white;
   border-radius: 3px;
   text-align: initial;
 }
 
 #filter > label > input {
-  background-color: inherit;
   border: none;
 }
 

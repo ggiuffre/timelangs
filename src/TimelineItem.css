@@ -7,18 +7,6 @@
   box-sizing: border-box;
 }
 
-/*.TimelineItem.language .content {
-  background-color: #BFF;
-}
-
-.TimelineItem.library .content {
-  background-color: #FBF;
-}
-
-.TimelineItem.software .content {
-  background-color: #FFB;
-}*/
-
 /* circles on the timeline */
 .TimelineItem::after {
   content: '';
