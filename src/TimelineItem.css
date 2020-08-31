@@ -13,10 +13,9 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid rgba(255, 0, 0, 0.66);
-  top: 15px;
+  right: -12.5px;
+  background-color: var(--accent-color);
+  top: 20px;
   border-radius: 50%;
   z-index: 1;
 }
@@ -33,32 +32,33 @@
   top: 22px;
   width: 0;
   z-index: 1;
-  border: medium solid white;
+  border: medium solid var(--material);
 }
 
 /* arrows for left containers (pointing right) */
 .left::before {
   right: 30px;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent var(--material);
 }
 
 /* arrows for right containers (pointing left) */
 .right::before {
   left: 30px;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent var(--material) transparent transparent;
 }
 
 /* fix the circle for containers on the right side */
 .right::after {
-  left: -16px;
+  left: -12.5px;
 }
 
 /* the actual content */
 .content {
   padding: 3%;
-  background-color: white;
+  background-color: var(--material);
+  color: var(--text-color);
   position: relative;
   border-radius: 4px;
   display: block;
@@ -69,19 +69,18 @@
   /* full-width containers */
   .TimelineItem {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    padding: 0.25em 0.5em;
+  }
+
+  .content {
+    padding: 1em;
   }
 
   /* make sure that all arrows are pointing leftwards */
-  .TimelineItem::before {
-    left: 60px;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
+  .TimelineItem::before { border: none; }
 
   /* make sure all circles are at the same spot */
-  .TimelineItem::after { left: 15px; }
+  .TimelineItem::after { width: 0; }
 
   /* make all right containers behave like the left ones */
   .right { left: 0; }
@@ -91,7 +90,7 @@
 .TimelineItem .tagsList {
   display: inline-block;
   opacity: 0;
-  color: #B55;
+  color: var(--primary-color);
   visibility: hidden;
   list-style: none;
   float: right;
@@ -109,10 +108,6 @@
     visibility: visible;
     transition: visibility 0s, opacity 0.2s;
   }
-
-  /*.TimelineItem .tagsList > li:hover {
-    color: #800;
-  }*/
 }
 
 /* single tag */

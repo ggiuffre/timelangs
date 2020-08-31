@@ -20,8 +20,9 @@
 
 /* responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
-/* place the timelime to the left */
-  .Timeline::after {
-    left: 31px;
-  }
+  /* no timeline */
+  .Timeline::after { display: none; }
+
+  /* less spacing */
+  .Timeline { margin: 1em auto; }
 }
