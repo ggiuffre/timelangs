@@ -1,36 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FilterForm from './FilterForm.js';
 import Timeline from './Timeline.js';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {languages: [], topic: ''};
-    this.updateTopic = this.updateTopic.bind(this);
-    this.updateTimeline = this.updateTimeline.bind(this);
-    this.topicFormFullPage = true;
-  }
+function App () {
+  const [topicFormFullPage, setTopicFormFullPage] = useState(true);
+  const [currentTopic, setCurrentTopic] = useState('');
+  const [languages, setLanguages] = useState([]);
 
-  componentDidMount() {
-    this.updateTimeline();
-  }
+  const updateTopic = (event) => {
+    setCurrentTopic(event.target.value);
+  };
 
-  updateTimeline(event) {
-    // if the timeline is updated due to a browser event...
-    if (arguments.length > 0) {
-      // avoid refreshing the page:
-      event.preventDefault();
-
-      // minimize the topic form after its first use:
-      if (this.topicFormFullPage)
-        this.topicFormFullPage = false;
-    }
-
-    // update the state of the timeline:
-    this.setState({languages: this.languagesWithTopic(this.state.topic)});
-  }
-
-  languagesWithTopic(topic) {
+  const languagesWithTopic = (topic) => {
     const cachedLanguages = require('./languages.json');
     if (topic === '') {
       return cachedLanguages;
@@ -39,28 +20,37 @@ class App extends React.Component {
         language => language.tags.includes(topic) 
       );
     }
-  }
+  };
 
-  updateTopic(event) {
-    this.setState({topic: event.target.value});
-  }
+  const updateTimeline = (event) => {
+    // if the timeline is updated due to a browser event...
+    if (arguments.length > 0) {
+      // avoid refreshing the page:
+      event.preventDefault();
 
-  render() {
-    const filterForm = <FilterForm
-        topic={this.state.topic}
-        updateTopic={this.updateTopic}
-        updateTimeline={this.updateTimeline}
-        fullPage={this.topicFormFullPage}
-      />;
+      // minimize the topic form after its first use:
+      if (topicFormFullPage)
+        setTopicFormFullPage(false);
+    }
 
-    const timeline = this.topicFormFullPage ? '' :
-      <Timeline items={this.state.languages} />;
+    // update the state of the timeline:
+    setLanguages(languagesWithTopic(currentTopic));
+  };
 
-    return <React.Fragment>
-      {filterForm}
-      {timeline}
-    </React.Fragment>;
-  }
+  const filterForm = <FilterForm
+      topic={currentTopic}
+      updateTopic={updateTopic}
+      updateTimeline={updateTimeline}
+      fullPage={topicFormFullPage}
+    />;
+
+  const timeline = topicFormFullPage ? '' :
+    <Timeline items={languages} />;
+
+  return <React.Fragment>
+    {filterForm}
+    {timeline}
+  </React.Fragment>;
 }
 
 export default App;
