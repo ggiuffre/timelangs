@@ -34,7 +34,7 @@ describe('A FilterForm component', () => {
     softwares: 'yup'
   };
 
-  it('renders a form, when in full-page', () => {
+  beforeEach(() => {
     render(<FilterForm
         topic=''
         types={types}
@@ -43,22 +43,15 @@ describe('A FilterForm component', () => {
         updateTimeline={() => {}}
         fullPage={true}
       />);
+  });
 
+  it('renders a form, when in full-page', () => {
     expect(screen.getByRole('form')).toBeInTheDocument();
     expect(screen.getByRole('combobox')).toBeInTheDocument();
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
   it('renders a form, when not in full-page', () => {
-    render(<FilterForm
-        topic=''
-        types={types}
-        updateTopic={() => {}}
-        updateTypes={() => {}}
-        updateTimeline={() => {}}
-        fullPage={false}
-      />);
-
     expect(screen.getByRole('form')).toBeInTheDocument();
     expect(screen.getByRole('combobox')).toBeInTheDocument();
     expect(screen.getByRole('button')).toBeInTheDocument();

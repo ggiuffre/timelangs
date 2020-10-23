@@ -12,10 +12,10 @@ const mockItem = {
 describe('', () => {
   beforeEach(() => {
     render(<TimelineItem
-      name={mockItem.name}
-      birth={mockItem.birth}
-      tags={mockItem.tags}
-      side='left'
+        name={mockItem.name}
+        birth={mockItem.birth}
+        tags={mockItem.tags}
+        side='left'
       />);
   });
 
