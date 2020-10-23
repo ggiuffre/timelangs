@@ -3,7 +3,8 @@ import TimelineItem from './TimelineItem.js';
 import './Timeline.css';
 
 function Timeline({items}) {
-  const decoratedTimelineItem = (data, side = 'right') => {
+  const decoratedTimelineItem = (data, index = 0) => {
+    const side = index % 2 ? 'left' : 'right';
     return <TimelineItem
       key={data.name}
       type={data.type}
@@ -17,8 +18,7 @@ function Timeline({items}) {
   return <ul className="Timeline">
     {items
       .sort((a, b) => (a.birth - b.birth))
-      .map((item, idx) =>
-        decoratedTimelineItem(item, (idx % 2 ? 'left' : 'right')))
+      .map(decoratedTimelineItem)
     }
   </ul>;
 }
