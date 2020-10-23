@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Timeline from './Timeline';
 
 const mockItemsArray = [
@@ -27,16 +27,14 @@ const mockItemsArray = [
 ];
 
 test('renders a timeline as a list', () => {
-  const { getAllByRole } = render(<Timeline items={mockItemsArray} />);
-
-  const timeline = getAllByRole('list')[0];
-  expect(timeline).toHaveClass('Timeline');
+  render(<Timeline items={mockItemsArray} />);
+  expect(screen.getAllByRole('list')[0]).toHaveClass('Timeline');
 });
 
 test('renders a list of languages', () => {
-  const { getAllByRole } = render(<Timeline items={mockItemsArray} />);
+  render(<Timeline items={mockItemsArray} />);
 
-  const timeline = getAllByRole('list')[0];
+  const timeline = screen.getAllByRole('list')[0];
   const languages = timeline.children;
   expect(languages.length).toBe(mockItemsArray.length);
   mockItemsArray.forEach((item, i) => {

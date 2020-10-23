@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, waitFor, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import FilterForm from './FilterForm';
 
 const mockItemsArray = [{
@@ -28,13 +28,14 @@ beforeEach(() => {
 
 
 describe('A FilterForm component', () => {
-  it('renders a form', () => {
-    const types = {
-      languages: 'yup',
-      libraries: 'yup',
-      softwares: 'yup'
-    };
-    const form = render(<FilterForm
+  const types = {
+    languages: 'yup',
+    libraries: 'yup',
+    softwares: 'yup'
+  };
+
+  it('renders a form, when in full-page', () => {
+    render(<FilterForm
         topic=''
         types={types}
         updateTopic={() => {}}
@@ -43,8 +44,23 @@ describe('A FilterForm component', () => {
         fullPage={true}
       />);
 
-    expect(form.getByRole('form')).toBeInTheDocument();
-    expect(form.getByRole('combobox')).toBeInTheDocument();
-    expect(form.getByRole('button')).toBeInTheDocument();
+    expect(screen.getByRole('form')).toBeInTheDocument();
+    expect(screen.getByRole('combobox')).toBeInTheDocument();
+    expect(screen.getByRole('button')).toBeInTheDocument();
+  });
+
+  it('renders a form, when not in full-page', () => {
+    render(<FilterForm
+        topic=''
+        types={types}
+        updateTopic={() => {}}
+        updateTypes={() => {}}
+        updateTimeline={() => {}}
+        fullPage={false}
+      />);
+
+    expect(screen.getByRole('form')).toBeInTheDocument();
+    expect(screen.getByRole('combobox')).toBeInTheDocument();
+    expect(screen.getByRole('button')).toBeInTheDocument();
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, waitFor, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import App from './App';
 
 const mockItemsArray = [{
@@ -32,24 +32,21 @@ beforeEach(() => {
 
 describe('An App component', () => {
   it('contains a form', () => {
-    const app = render(<App />);
-
-    expect(app.getByRole('form')).toBeInTheDocument();
+    render(<App />);
+    expect(screen.getByRole('form')).toBeInTheDocument();
   });
 
   it('does not show a timeline, if not requested', () => {
-    const app = render(<App />);
-
+    render(<App />);
     screen.queryAllByRole('list').forEach(renderedList => {
       expect(renderedList).not.toHaveClass('Timeline');
     });
   });
 
   it('shows a timeline of items, upon request', async () => {
-    const app = render(<App />);
+    render(<App />);
 
     fireEvent.click(screen.getByText('Update'));
-
     await screen.getAllByRole('list');
 
     expect(screen.getAllByRole('list')[0]).toBeInTheDocument();

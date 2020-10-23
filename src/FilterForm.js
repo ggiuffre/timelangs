@@ -12,25 +12,25 @@ function FilterForm({ topic, fullPage, updateTopic, updateTimeline }) {
 
   return <form
       className={fullPage ? 'fullpage' : ''}
-      name="filter"
-      id="filter"
+      name='filter'
+      id='filter'
       onSubmit={updateTimeline}
     >
-    <label id="topic">Topic: <input
-        tabIndex="1"
-        type="text"
+    <label id='topic'>Topic: <input
+        tabIndex='1'
+        type='text'
         value={topic}
         onChange={updateTopic}
-        placeholder="OOP, Lisp, JVM..."
-        list="topics"
+        placeholder='OOP, Lisp, JVM...'
+        list='topics'
       />
     </label>
-    <datalist id="topics">
+    <datalist id='topics'>
       {options}
     </datalist>
 
     <label>
-      <input type="submit" value="Update" />
+      <input type='submit' value='Update' />
     </label>
   </form>;
 }

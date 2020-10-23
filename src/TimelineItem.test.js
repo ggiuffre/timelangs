@@ -10,68 +10,70 @@ const mockItem = {
 };
 
 describe('', () => {
-  const { getAllByRole, getByRole } = render(<TimelineItem
-    name={mockItem.name}
-    birth={mockItem.birth}
-    tags={mockItem.tags}
-    side="left"
-    />);
-  const timelineItem = getAllByRole('listitem')[0];
+  beforeEach(() => {
+    render(<TimelineItem
+      name={mockItem.name}
+      birth={mockItem.birth}
+      tags={mockItem.tags}
+      side='left'
+      />);
+  });
 
   test('renders a TimelineItem', () => {
+    const timelineItem = screen.getAllByRole('listitem')[0];
     expect(timelineItem).toHaveClass('TimelineItem');
   });
 
-  test('has known content', () => {
+  test('displays the name of a programming language', () => {
+    const timelineItem = screen.getAllByRole('listitem')[0];
     expect(timelineItem.textContent).toMatch(mockItem.name);
+  });
+
+  test('displays the year of birth of a programming language', () => {
+    const timelineItem = screen.getAllByRole('listitem')[0];
     expect(timelineItem.textContent).toMatch(mockItem.birth.toString());
+  });
+
+  test('displays tags related to a programming language', () => {
+    const timelineItem = screen.getAllByRole('listitem')[0];
     mockItem.tags.forEach(tag => {
       expect(timelineItem.textContent).toMatch(tag);
     });
   });
-});
 
-test('contains a list of tags', () => {
-  const { getAllByRole, getByRole } = render(<TimelineItem
-    name={mockItem.name}
-    birth={mockItem.birth}
-    tags={mockItem.tags}
-    side="left"
-    />);
-
-  const tagsList = getByRole('list');
-  expect(tagsList).toHaveClass('tagsList');
-  const tags = tagsList.children;
-  expect(tags.length).toBe(mockItem.tags.length);
-  mockItem.tags.forEach((item, i) => {
-    expect(tags[i].textContent).toContain(item);
+  test('contains a list of tags', () => {
+    const tags = screen.getByRole('list').children;
+    expect(tags.length).toBe(mockItem.tags.length);
+    mockItem.tags.forEach((item, i) => {
+      expect(tags[i].textContent).toContain(item);
+    });
   });
 });
 
 // test('has no visible tags until clicked or hovered', () => {
-//   const { getAllByRole, getByRole } = render(<TimelineItem
+//   render(<TimelineItem
 //     name={mockItem.name}
 //     birth={mockItem.birth}
 //     tags={mockItem.tags}
-//     side="left"
+//     side='left'
 //     />);
 
-//   const tagsList = getByRole('list');
+//   const tagsList = screen.getByRole('list');
 //   expect(tagsList).not.toBeVisible();
 // });
 
 // test('has visible tags when clicked', async () => {
-//   const { getAllByRole, getByRole } = render(<TimelineItem
+//   render(<TimelineItem
 //     name={mockItem.name}
 //     birth={mockItem.birth}
 //     tags={mockItem.tags}
-//     side="left"
+//     side='left'
 //     />);
-//   const TimelineItem = getAllByRole('listitem')[0];
+//   const TimelineItem = screen.getAllByRole('listitem')[0];
 
 //   fireEvent.click(TimelineItem);
-//   await waitFor(() => getByRole('list'));
+//   await waitFor(() => screen.getByRole('list'));
 
-//   const tagsList = getByRole('list');
+//   const tagsList = screen.getByRole('list');
 //   expect(tagsList).toBeVisible();
 // });
