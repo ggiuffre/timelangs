@@ -2,7 +2,17 @@
 	{
 		"name": "Ada",
 		"birth": 1980,
-		"tags": ["Pascal", "OOP", "embedded"]
+		"tags": ["Pascal", "OOP", "embedded", "nominal type system"]
+	},
+	{
+		"name": "ALGOL",
+		"birth": 1958,
+		"tags": ["ALGOL"]
+	},
+	{
+		"name": "AWK",
+		"birth": 1977,
+		"tags": ["scripting", "text manipulation"]
 	},
 	{
 		"name": "Bash",
@@ -12,17 +22,20 @@
 	{
 		"name": "C",
 		"birth": 1972,
-		"tags": ["C", "embedded", "zero-indexed"]
+		"tags": ["C", "embedded", "zero-indexed", "ISO standard",
+			"nominal type system"]
 	},
 	{
 		"name": "C++",
 		"birth": 1985,
-		"tags": ["C", "OOP", "embedded", "zero-indexed"]
+		"tags": ["C", "OOP", "embedded", "zero-indexed", "ISO standard",
+			"nominal type system"]
 	},
 	{
 		"name": "C#",
 		"birth": 2000,
-		"tags": [".NET", "OOP", "zero-indexed", "garbage collector"]
+		"tags": [".NET", "OOP", "zero-indexed", "garbage collector",
+			"ISO standard", "nominal type system"]
 	},
 	{
 		"name": "Caml",
@@ -38,13 +51,14 @@
 	{
 		"name": "COBOL",
 		"birth": 1959,
-		"tags": ["COBOL"]
+		"tags": ["COBOL", "ISO standard", "nominal type system"]
 	},
 	{
 		"name": "Common Lisp",
 		"birth": 1984,
 		"tags": ["Lisp", "functional programming", "OOP",
-			"garbage collector", "zero-indexed"]
+			"garbage collector", "zero-indexed", "nominal type system",
+			"structural type system"]
 	},
 	{
 		"name": "CSS",
@@ -55,12 +69,12 @@
 		"name": "Dart",
 		"birth": 2011,
 		"tags": ["Dart", "web", "mobile", "garbage collector",
-			"OOP", "iOS", "Android"]
+			"OOP", "iOS", "Android", "nominal type system"]
 	},
 	{
 		"name": "Eiffel",
 		"birth": 1986,
-		"tags": ["Eiffel", "OOP"]
+		"tags": ["Eiffel", "OOP", "nominal type system"]
 	},
 	{
 		"name": "Elixir",
@@ -81,12 +95,19 @@
 	{
 		"name": "Fortran",
 		"birth": 1957,
-		"tags": ["Fortran", "scientific computing"]
+		"tags": ["Fortran", "scientific computing", "ISO standard",
+			"nominal type system"]
+	},
+	{
+		"name": "F#",
+		"birth": 2005,
+		"tags": [".NET", "ML", "OCaml", "functional programming", "OOP",
+			"zero-indexed", "nominal type system"]
 	},
 	{
 		"name": "Go",
 		"birth": 2009,
-		"tags": ["Go", "concurrency", "OOP",
+		"tags": ["Go", "concurrency", "OOP", "structural type system",
 			"garbage collector", "zero-indexed"]
 	},
 	{
@@ -102,8 +123,8 @@
 	{
 		"name": "Haskell",
 		"birth": 1990,
-		"tags": ["Haskell", "functional programming",
-			"garbage collector", "zero-indexed"]
+		"tags": ["Haskell", "functional programming", "garbage collector",
+			"nominal type system", "zero-indexed"]
 	},
 	{
 		"name": "HTML",
@@ -114,7 +135,7 @@
 		"name": "Java",
 		"birth": 1995,
 		"tags": ["Java", "JVM", "OOP", "garbage collector",
-			"mobile", "Android", "zero-indexed"]
+			"mobile", "Android", "zero-indexed", "nominal type system"]
 	},
 	{
 		"name": "JavaScript",
@@ -126,19 +147,20 @@
 	{
 		"name": "Julia",
 		"birth": 2012,
-		"tags": ["Julia", "garbage collector"]
+		"tags": ["Julia", "garbage collector", "nominal type system",
+			"structural type system"]
 	},
 	{
 		"name": "Kotlin",
 		"birth": 2011,
 		"tags": ["Java", "JVM", "mobile", "garbage collector",
-			"Android"]
+			"Android", "nominal type system"]
 	},
 	{
 		"name": "Lisp",
 		"birth": 1958,
-		"tags": ["Lisp", "functional programming",
-			"garbage collector", "zero-indexed"]
+		"tags": ["Lisp", "functional programming", "garbage collector",
+			"zero-indexed", "ISO standard"]
 	},
 	{
 		"name": "Lua",
@@ -169,24 +191,24 @@
 	{
 		"name": "Objective-C",
 		"birth": 1984,
-		"tags": ["Objective-C", "C", "OOP", "mobile",
-			"iOS", "zero-indexed"]
+		"tags": ["Objective-C", "C", "OOP", "mobile", "iOS",
+			"zero-indexed", "nominal type system"]
 	},
 	{
 		"name": "OCaml",
 		"birth": 1985,
 		"tags": ["ML", "functional programming", "garbage collector",
-			"OOP"]
+			"OOP", "nominal type system", "structural type system"]
 	},
 	{
 		"name": "Oz",
 		"birth": 1991,
-		"tags": ["Oz", "multi-paradigm"]
+		"tags": ["Oz", "multi-paradigm", "structural type system"]
 	},
 	{
 		"name": "Pascal",
 		"birth": 1970,
-		"tags": ["Pascal"]
+		"tags": ["Pascal", "ALGOL", "ISO standard", "nominal type system"]
 	},
 	{
 		"name": "Perl",
@@ -198,7 +220,12 @@
 		"name": "PHP",
 		"birth": 1995,
 		"tags": ["PHP", "scripting", "web", "zero-indexed",
-			"garbage collector"]
+			"garbage collector", "nominal type system"]
+	},
+	{
+		"name": "PL/I",
+		"birth": 1964,
+		"tags": ["ISO standard"]
 	},
 	{
 		"name": "Prolog",
@@ -208,7 +235,7 @@
 	{
 		"name": "Python",
 		"birth": 1990,
-		"tags": ["Python", "scripting", "procedural",
+		"tags": ["Python", "scripting", "structural type system",
 			"OOP", "zero-indexed", "garbage collector"]
 	},
 	{
@@ -225,20 +252,20 @@
 	{
 		"name": "Ruby",
 		"birth": 1995,
-		"tags": ["Ruby", "OOP", "scripting",
-			"garbage collector", "zero-indexed"]
+		"tags": ["Ruby", "OOP", "scripting", "garbage collector",
+			"zero-indexed"]
 	},
 	{
 		"name": "Rust",
 		"birth": 2010,
-		"tags": ["Rust", "concurrency"]
+		"tags": ["Rust", "concurrency", "nominal type system"]
 	},
 	{
 		"name": "Scala",
 		"birth": 2004,
-		"tags": ["Java", "JVM", "OOP", "mobile",
-			"functional programming", "Android", "zero-indexed",
-			"multi-paradigm"]
+		"tags": ["Java", "JVM", "OOP", "mobile", "Android",
+			"functional programming", "zero-indexed", "multi-paradigm",
+			"nominal type system", "structural type system"]
 	},
 	{
 		"name": "Scheme",
@@ -258,13 +285,18 @@
 	{
 		"name": "SQL",
 		"birth": 1974,
-		"tags": ["SQL", "databases"]
+		"tags": ["SQL", "databases", "query language"]
+	},
+	{
+		"name": "sed",
+		"birth": 1974,
+		"tags": ["scripting", "text manipulation"]
 	},
 	{
 		"name": "Swift",
 		"birth": 2014,
-		"tags": ["Swift", "OOP", "mobile", "iOS",
-			"zero-indexed"]
+		"tags": ["Swift", "OOP", "mobile", "iOS", "zero-indexed",
+			"nominal type system", "structural type system"]
 	},
 	{
 		"name": "TeX",
@@ -276,16 +308,22 @@
 		"birth": 2012,
 		"tags": ["JavaScript", "scripting", "ECMAScript",
 			"event-driven", "OOP", "functional programming",
-			"garbage collector", "zero-indexed"]
+			"garbage collector", "zero-indexed", "structural type system"]
 	},
 	{
 		"name": "VBA",
 		"birth": 1993,
-		"tags": ["Visual Basic", "event-driven", "zero-indexed"]
+		"tags": ["Visual Basic", "event-driven", "zero-indexed",
+			"nominal type system"]
 	},
 	{
 		"name": "XML",
 		"birth": 1996,
 		"tags": ["XML", "markup", "web"]
+	},
+	{
+		"name": "XPath",
+		"birth": 1998,
+		"tags": ["XML", "web", "query language", "nominal type system"]
 	}
 ]
