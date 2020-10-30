@@ -2,21 +2,26 @@ import React, { useState } from 'react';
 import FilterForm from './FilterForm.js';
 import Timeline from './Timeline.js';
 
+const tagsConcat = (tags, lang) => [...tags, ...lang.tags];
+const clean = (array) => Array.from(new Set(array));
+
 function App () {
+  const languages = require('./languages.json'); // TODO
+  const tags = clean(languages.reduce(tagsConcat, []));
+
   const [topicFormFullPage, setTopicFormFullPage] = useState(true);
   const [currentTopic, setCurrentTopic] = useState('');
-  const [languages, setLanguages] = useState([]);
+  const [currentLanguages, setCurrentLanguages] = useState([]);
 
   const updateTopic = (event) => {
     setCurrentTopic(event.target.value);
   };
 
   const languagesWithTopic = (topic) => {
-    const cachedLanguages = require('./languages.json');
     if (topic === '') {
-      return cachedLanguages;
+      return languages;
     } else {
-      return cachedLanguages.filter(
+      return languages.filter(
         language => language.tags.includes(topic) 
       );
     }
@@ -34,10 +39,11 @@ function App () {
     }
 
     // update the state of the timeline:
-    setLanguages(languagesWithTopic(currentTopic));
+    setCurrentLanguages(languagesWithTopic(currentTopic));
   };
 
   const filterForm = <FilterForm
+      tags={tags}
       topic={currentTopic}
       updateTopic={updateTopic}
       updateTimeline={updateTimeline}
@@ -45,7 +51,7 @@ function App () {
     />;
 
   const timeline = topicFormFullPage ? '' :
-    <Timeline items={languages} />;
+    <Timeline items={currentLanguages} />;
 
   return <React.Fragment>
     {filterForm}

@@ -1,11 +1,13 @@
 import React from 'react';
 import './FilterForm.css';
 
-const tagsConcat = (tags, lang) => [...tags, ...lang.tags];
-const clean = (array) => Array.from(new Set(array));
-
-function FilterForm({ topic, fullPage, updateTopic, updateTimeline }) {
-  const tags = clean(require('./languages.json').reduce(tagsConcat, []));
+function FilterForm({
+  tags,
+  topic,
+  fullPage,
+  updateTopic,
+  updateTimeline
+}) {
   const options = tags
     .map(tag => <option value={tag} key={tag} />)
     .sort((a, b) => a.key.localeCompare(b.key));
