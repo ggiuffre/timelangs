@@ -3,7 +3,7 @@ import FilterForm from './FilterForm.js';
 import Timeline from './Timeline.js';
 
 const tagsConcat = (tags, lang) => [...tags, ...lang.tags];
-const clean = (array) => Array.from(new Set(array));
+const clean = array => Array.from(new Set(array));
 
 function App () {
   const languages = require('./languages.json'); // TODO
@@ -13,11 +13,9 @@ function App () {
   const [currentTopic, setCurrentTopic] = useState('');
   const [currentLanguages, setCurrentLanguages] = useState([]);
 
-  const updateTopic = (event) => {
-    setCurrentTopic(event.target.value);
-  };
+  const updateTopic = event => setCurrentTopic(event.target.value);
 
-  const languagesWithTopic = (topic) => {
+  const languagesWithTopic = topic => {
     if (topic === '') {
       return languages;
     } else {
@@ -27,7 +25,7 @@ function App () {
     }
   };
 
-  const updateTimeline = (event) => {
+  const updateTimeline = event => {
     // if the timeline is updated due to a browser event...
     if (arguments.length > 0) {
       // avoid refreshing the page:

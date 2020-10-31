@@ -49,31 +49,3 @@ describe('', () => {
     });
   });
 });
-
-// test('has no visible tags until clicked or hovered', () => {
-//   render(<TimelineItem
-//     name={mockItem.name}
-//     birth={mockItem.birth}
-//     tags={mockItem.tags}
-//     side='left'
-//     />);
-
-//   const tagsList = screen.getByRole('list');
-//   expect(tagsList).not.toBeVisible();
-// });
-
-// test('has visible tags when clicked', async () => {
-//   render(<TimelineItem
-//     name={mockItem.name}
-//     birth={mockItem.birth}
-//     tags={mockItem.tags}
-//     side='left'
-//     />);
-//   const TimelineItem = screen.getAllByRole('listitem')[0];
-
-//   fireEvent.click(TimelineItem);
-//   await waitFor(() => screen.getByRole('list'));
-
-//   const tagsList = screen.getByRole('list');
-//   expect(tagsList).toBeVisible();
-// });
