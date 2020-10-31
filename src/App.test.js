@@ -19,9 +19,6 @@ const mockItemsArray = [{
     tags: ['something-else', 'some tag']
 }];
 
-const mockTags = ['SomeLibrary', 'libraries', 'some other tag',
-  'Some Language', 'languages', 'something-else', 'some tag'];
-
 beforeEach(() => {
   jest.mock('./languages.json', () =>
     mockItemsArray
