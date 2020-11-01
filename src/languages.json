@@ -2,118 +2,134 @@
 	{
 		"name": "Ada",
 		"birth": 1980,
-		"tags": ["Pascal", "OOP", "embedded", "nominal type system"]
+		"tags": ["Pascal", "OOP", "embedded", "nominal type system",
+			"imperative programming", "ISO standard", "concurrency"]
 	},
 	{
 		"name": "ALGOL",
 		"birth": 1958,
-		"tags": ["ALGOL"]
+		"tags": ["ALGOL", "scientific computing", "imperative programming",
+			"ISO standard"]
 	},
 	{
 		"name": "AWK",
 		"birth": 1977,
-		"tags": ["scripting", "text manipulation"]
+		"tags": ["scripting", "text manipulation", "imperative programming"]
 	},
 	{
 		"name": "Bash",
 		"birth": 1989,
-		"tags": ["Shell", "scripting", "text manipulation"]
+		"tags": ["Shell", "scripting", "text manipulation",
+			"imperative programming"]
+	},
+	{
+		"name": "BCPL",
+		"birth": 1967,
+		"tags": ["CPL", "imperative programming"]
 	},
 	{
 		"name": "C",
 		"birth": 1972,
 		"tags": ["C", "embedded", "zero-indexed", "ISO standard",
-			"nominal type system"]
+			"nominal type system", "imperative programming"]
 	},
 	{
 		"name": "C++",
 		"birth": 1985,
 		"tags": ["C", "OOP", "embedded", "zero-indexed", "ISO standard",
-			"nominal type system"]
+			"nominal type system", "imperative programming"]
 	},
 	{
 		"name": "C#",
 		"birth": 2000,
 		"tags": [".NET", "OOP", "zero-indexed", "garbage collector",
-			"ISO standard", "nominal type system"]
+			"ISO standard", "nominal type system", "imperative programming"]
 	},
 	{
 		"name": "Caml",
 		"birth": 1985,
-		"tags": ["ML", "functional programming"]
+		"tags": ["ML", "FP", "imperative programming"]
 	},
 	{
 		"name": "Clojure",
 		"birth": 2007,
-		"tags": ["Lisp", "JVM", "Java", "functional programming",
-			"garbage collector", "zero-indexed", "concurrency"]
+		"tags": ["Lisp", "JVM", "Java", "FP", "concurrency",
+			"garbage collector", "zero-indexed"]
 	},
 	{
 		"name": "COBOL",
 		"birth": 1959,
-		"tags": ["COBOL", "ISO standard", "nominal type system"]
+		"tags": ["COBOL", "ISO standard", "nominal type system",
+			"imperative programming"]
 	},
 	{
 		"name": "Common Lisp",
 		"birth": 1984,
-		"tags": ["Lisp", "functional programming", "OOP",
+		"tags": ["Lisp", "FP", "OOP",
 			"garbage collector", "zero-indexed", "nominal type system",
 			"structural type system"]
 	},
 	{
-		"name": "CSS",
-		"birth": 1996,
-		"tags": ["CSS", "web", "graphics"]
+		"name": "Coq",
+		"birth": 1989,
+		"tags": ["Coq", "FP", "purely functional"]
+	},
+	{
+		"name": "CPL",
+		"birth": 1963,
+		"tags": ["CPL", "multi-paradigm", "imperative programming"]
 	},
 	{
 		"name": "Dart",
 		"birth": 2011,
 		"tags": ["Dart", "web", "mobile", "garbage collector",
-			"OOP", "iOS", "Android", "nominal type system"]
+			"OOP", "iOS", "Android", "nominal type system",
+			"imperative programming", "FP"]
 	},
 	{
 		"name": "Eiffel",
 		"birth": 1986,
-		"tags": ["Eiffel", "OOP", "nominal type system"]
+		"tags": ["Eiffel", "OOP", "nominal type system", "concurrency",
+			"imperative programming"]
 	},
 	{
 		"name": "Elixir",
 		"birth": 2011,
-		"tags": ["Erlang", "functional programming", "concurrency"]
+		"tags": ["Erlang", "FP", "concurrency", "off-side rule"]
 	},
 	{
 		"name": "Elm",
 		"birth": 2012,
-		"tags": ["Elm", "functional programming", "web"]
+		"tags": ["Elm", "FP", "web"]
 	},
 	{
 		"name": "Erlang",
 		"birth": 1986,
-		"tags": ["Erlang", "functional programming", "concurrency",
-			"garbage collector"]
+		"tags": ["Erlang", "FP", "concurrency", "garbage collector"]
 	},
 	{
 		"name": "Fortran",
 		"birth": 1957,
 		"tags": ["Fortran", "scientific computing", "ISO standard",
-			"nominal type system"]
+			"nominal type system", "imperative programming"]
 	},
 	{
 		"name": "F#",
 		"birth": 2005,
-		"tags": [".NET", "ML", "OCaml", "functional programming", "OOP",
-			"zero-indexed", "nominal type system"]
+		"tags": [".NET", "ML", "OCaml", "FP", "OOP", "off-side rule",
+			"zero-indexed", "nominal type system", "imperative programming"]
 	},
 	{
 		"name": "Go",
 		"birth": 2009,
 		"tags": ["Go", "concurrency", "OOP", "structural type system",
-			"garbage collector", "zero-indexed"]
+			"garbage collector", "zero-indexed", "imperative programming",
+			"concurrency"]
 	},
 	{
 		"name": "Groovy",
 		"birth": 2003,
-		"tags": ["Java", "JVM", "OOP"]
+		"tags": ["Java", "JVM", "OOP", "imperative programming", "FP"]
 	},
 	{
 		"name": "GraphQL",
@@ -123,49 +139,48 @@
 	{
 		"name": "Haskell",
 		"birth": 1990,
-		"tags": ["Haskell", "functional programming", "garbage collector",
-			"nominal type system", "zero-indexed"]
-	},
-	{
-		"name": "HTML",
-		"birth": 1993,
-		"tags": ["HTML", "markup", "web"]
+		"tags": ["Haskell", "FP", "garbage collector", "concurrency",
+			"nominal type system", "zero-indexed", "purely functional",
+			"off-side rule"]
 	},
 	{
 		"name": "Java",
 		"birth": 1995,
-		"tags": ["Java", "JVM", "OOP", "garbage collector",
-			"mobile", "Android", "zero-indexed", "nominal type system"]
+		"tags": ["Java", "JVM", "OOP", "garbage collector", "concurrency",
+			"mobile", "Android", "zero-indexed", "nominal type system",
+			"imperative programming", "FP"]
 	},
 	{
 		"name": "JavaScript",
 		"birth": 1997,
 		"tags": ["JavaScript", "scripting", "ECMAScript",
-			"event-driven", "OOP", "functional programming",
-			"garbage collector", "zero-indexed"]
+			"event-driven", "OOP", "FP",
+			"garbage collector", "zero-indexed", "imperative programming"]
 	},
 	{
 		"name": "Julia",
 		"birth": 2012,
-		"tags": ["Julia", "garbage collector", "nominal type system",
-			"structural type system"]
+		"tags": ["Julia", "garbage collector", "nominal type system", "FP",
+			"structural type system", "imperative programming", "concurrency",
+			"scientific computing"]
 	},
 	{
 		"name": "Kotlin",
 		"birth": 2011,
-		"tags": ["Java", "JVM", "mobile", "garbage collector",
-			"Android", "nominal type system"]
+		"tags": ["Java", "JVM", "mobile", "garbage collector", "FP",
+			"Android", "nominal type system", "imperative programming"]
 	},
 	{
 		"name": "Lisp",
 		"birth": 1958,
-		"tags": ["Lisp", "functional programming", "garbage collector",
+		"tags": ["Lisp", "FP", "garbage collector",
 			"zero-indexed", "ISO standard"]
 	},
 	{
 		"name": "Lua",
 		"birth": 1993,
-		"tags": ["Lua", "embedded", "garbage collector"]
+		"tags": ["Lua", "embedded", "garbage collector",
+			"imperative programming"]
 	},
 	{
 		"name": "Markdown",
@@ -175,117 +190,126 @@
 	{
 		"name": "MATLAB",
 		"birth": 1984,
-		"tags": ["MATLAB", "scientific computing", "OOP"]
+		"tags": ["MATLAB", "scientific computing", "OOP",
+			"imperative programming"]
 	},
 	{
 		"name": "ML",
 		"birth": 1973,
-		"tags": ["ML", "functional programming", "garbage collector"]
+		"tags": ["ML", "FP", "garbage collector"]
 	},
 	{
 		"name": "Nim",
 		"birth": 2008,
-		"tags": ["Nim", "scripting", "OOP",
-			"functional programming", "zero-indexed"]
+		"tags": ["Nim", "scripting", "OOP", "imperative programming",
+			"FP", "zero-indexed", "FP", "off-side rule"]
 	},
 	{
 		"name": "Objective-C",
 		"birth": 1984,
 		"tags": ["Objective-C", "C", "OOP", "mobile", "iOS",
-			"zero-indexed", "nominal type system"]
+			"zero-indexed", "nominal type system", "imperative programming"]
 	},
 	{
 		"name": "OCaml",
 		"birth": 1985,
-		"tags": ["ML", "functional programming", "garbage collector",
-			"OOP", "nominal type system", "structural type system"]
+		"tags": ["ML", "FP", "garbage collector",
+			"OOP", "nominal type system", "structural type system",
+			"imperative programming"]
 	},
 	{
 		"name": "Oz",
 		"birth": 1991,
-		"tags": ["Oz", "multi-paradigm", "structural type system"]
+		"tags": ["Oz", "multi-paradigm", "structural type system", "FP",
+			"imperative programming", "concurrency", "dataflow"]
 	},
 	{
 		"name": "Pascal",
 		"birth": 1970,
-		"tags": ["Pascal", "ALGOL", "ISO standard", "nominal type system"]
+		"tags": ["Pascal", "ALGOL", "ISO standard", "nominal type system",
+			"imperative programming"]
 	},
 	{
 		"name": "Perl",
 		"birth": 1987,
 		"tags": ["Perl", "scripting", "zero-indexed", "garbage collector",
-			"text manipulation"]
+			"text manipulation", "imperative programming", "FP"]
 	},
 	{
 		"name": "PHP",
 		"birth": 1995,
-		"tags": ["PHP", "scripting", "web", "zero-indexed",
-			"garbage collector", "nominal type system"]
+		"tags": ["PHP", "scripting", "nominal type system", "zero-indexed",
+			"imperative programming", "garbage collector", "web"]
 	},
 	{
 		"name": "PL/I",
 		"birth": 1964,
-		"tags": ["ISO standard"]
+		"tags": ["ISO standard", "imperative programming"]
 	},
 	{
 		"name": "Prolog",
 		"birth": 1972,
-		"tags": ["Prolog", "logic programming"]
+		"tags": ["Prolog", "logic programming", "ISO standard"]
 	},
 	{
 		"name": "Python",
 		"birth": 1990,
-		"tags": ["Python", "scripting", "structural type system",
-			"OOP", "zero-indexed", "garbage collector"]
+		"tags": ["Python", "scripting", "structural type system", "OOP", "FP",
+			"zero-indexed", "garbage collector", "imperative programming",
+			"off-side rule"]
 	},
 	{
 		"name": "R",
 		"birth": 1993,
-		"tags": ["R", "statistics", "scripting"]
+		"tags": ["R", "statistics", "scripting", "imperative programming",
+			"FP", "scientific computing"]
 	},
 	{
 		"name": "Racket",
 		"birth": 1995,
-		"tags": ["Lisp", "functional programming", "garbage collector",
-			"multi-paradigm"]
+		"tags": ["Lisp", "FP", "garbage collector", "multi-paradigm",
+			"imperative programming"]
 	},
 	{
 		"name": "Ruby",
 		"birth": 1995,
-		"tags": ["Ruby", "OOP", "scripting", "garbage collector",
-			"zero-indexed"]
+		"tags": ["Ruby", "OOP", "scripting", "garbage collector", "FP",
+			"zero-indexed", "imperative programming", "ISO standard"]
 	},
 	{
 		"name": "Rust",
 		"birth": 2010,
-		"tags": ["Rust", "concurrency", "nominal type system"]
+		"tags": ["Rust", "concurrency", "nominal type system", "FP",
+				"imperative programming"]
 	},
 	{
 		"name": "Scala",
 		"birth": 2004,
-		"tags": ["Java", "JVM", "OOP", "mobile", "Android",
-			"functional programming", "zero-indexed", "multi-paradigm",
-			"nominal type system", "structural type system"]
+		"tags": ["Java", "JVM", "OOP", "mobile", "Android", "FP",
+			"zero-indexed", "multi-paradigm", "nominal type system",
+			"structural type system", "imperative programming",
+			"concurrency"]
 	},
 	{
 		"name": "Scheme",
 		"birth": 1975,
-		"tags": ["Lisp", "functional programming", "garbage collector"]
+		"tags": ["Lisp", "FP", "garbage collector"]
 	},
 	{
 		"name": "Smalltalk-80",
 		"birth": 1980,
-		"tags": ["Smalltalk", "OOP", "garbage collector"]
+		"tags": ["Smalltalk", "OOP", "garbage collector",
+			"imperative programming", "scripting"]
 	},
 	{
 		"name": "SNOBOL",
 		"birth": 1962,
-		"tags": ["SNOBOL", "text manipulation"]
+		"tags": ["SNOBOL", "text manipulation", "imperative programming"]
 	},
 	{
 		"name": "SQL",
 		"birth": 1974,
-		"tags": ["SQL", "databases", "query language"]
+		"tags": ["SQL", "databases", "query language", "ISO standard"]
 	},
 	{
 		"name": "sed",
@@ -296,30 +320,26 @@
 		"name": "Swift",
 		"birth": 2014,
 		"tags": ["Swift", "OOP", "mobile", "iOS", "zero-indexed",
-			"nominal type system", "structural type system"]
+			"nominal type system", "structural type system",
+			"imperative programming"]
 	},
 	{
 		"name": "TeX",
 		"birth": 1978,
-		"tags": ["TeX", "typesetting", "markup"]
+		"tags": ["TeX", "typesetting", "markup", "imperative programming"]
 	},
 	{
 		"name": "TypeScript",
 		"birth": 2012,
-		"tags": ["JavaScript", "scripting", "ECMAScript",
-			"event-driven", "OOP", "functional programming",
-			"garbage collector", "zero-indexed", "structural type system"]
+		"tags": ["JavaScript", "scripting", "ECMAScript", "event-driven",
+			"OOP", "FP", "garbage collector", "zero-indexed", "FP",
+			"structural type system", "imperative programming"]
 	},
 	{
 		"name": "VBA",
 		"birth": 1993,
 		"tags": ["Visual Basic", "event-driven", "zero-indexed",
 			"nominal type system"]
-	},
-	{
-		"name": "XML",
-		"birth": 1996,
-		"tags": ["XML", "markup", "web"]
 	},
 	{
 		"name": "XPath",
