@@ -123,8 +123,7 @@
 		"name": "Go",
 		"birth": 2009,
 		"tags": ["Go", "concurrency", "OOP", "structural type system",
-			"garbage collector", "zero-indexed", "imperative programming",
-			"concurrency"]
+			"garbage collector", "zero-indexed", "imperative programming"]
 	},
 	{
 		"name": "Groovy",
@@ -202,7 +201,7 @@
 		"name": "Nim",
 		"birth": 2008,
 		"tags": ["Nim", "scripting", "OOP", "imperative programming",
-			"FP", "zero-indexed", "FP", "off-side rule"]
+			"FP", "zero-indexed", "off-side rule"]
 	},
 	{
 		"name": "Objective-C",
@@ -332,7 +331,7 @@
 		"name": "TypeScript",
 		"birth": 2012,
 		"tags": ["JavaScript", "scripting", "ECMAScript", "event-driven",
-			"OOP", "FP", "garbage collector", "zero-indexed", "FP",
+			"OOP", "FP", "garbage collector", "zero-indexed",
 			"structural type system", "imperative programming"]
 	},
 	{
