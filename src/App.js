@@ -7,12 +7,10 @@ const tagsConcat = (tags, lang) => [...tags, ...lang.tags];
 const clean = array => Array.from(new Set(array));
 
 function App () {
-  console.log('rendering...');
   const languages = require('./languages.json'); // TODO
   const tags = clean(languages.reduce(tagsConcat, []));
 
   const languagesWithTopic = useCallback(topic => {
-    console.log(`filtering languages to match ${topic}...`);
     if (topic === '') {
       return languages;
     } else {
@@ -30,7 +28,6 @@ function App () {
   const [currentLanguages, setCurrentLanguages] = useState([]);
 
   useEffect(() => {
-    console.log(`tag changed to ${tag}`);
     setCurrentTopic(tag || '');
     setCurrentLanguages(languagesWithTopic(tag || ''));
   }, [tag, languagesWithTopic]);
@@ -40,7 +37,6 @@ function App () {
   const updateTopic = event => setCurrentTopic(event.target.value);
 
   const updateTimeline = event => {
-    console.log('updateTimeline...');
     // if the timeline is updated due to a browser event...
     if (arguments.length > 0) {
       // avoid refreshing the page:
@@ -53,9 +49,6 @@ function App () {
       if (topicFormFullPage)
         setTopicFormFullPage(false);
     }
-
-    // update the state of the timeline:
-    setCurrentLanguages(languagesWithTopic(currentTopic));
   };
 
   const filterForm = <FilterForm
