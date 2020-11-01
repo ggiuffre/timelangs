@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import FilterForm from './FilterForm';
 
@@ -13,13 +14,17 @@ describe('A FilterForm component', () => {
   ];
 
   beforeEach(() => {
-    render(<FilterForm
-        tags={mockTags}
-        topic=''
-        updateTopic={() => {}}
-        updateTimeline={() => {}}
-        fullPage={true}
-      />);
+    render(
+      <MemoryRouter>
+        <FilterForm
+          tags={mockTags}
+          topic=''
+          updateTopic={() => {}}
+          updateTimeline={() => {}}
+          fullPage={true}
+        />
+      </MemoryRouter>
+    );
   });
 
   it('renders a form, when in full-page', () => {

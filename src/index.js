@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashRouter, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -6,7 +7,11 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HashRouter hashType='noslash'>
+      <Route path={['/:tag', '/']}>
+        <App />
+      </Route>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

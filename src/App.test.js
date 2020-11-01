@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { render, fireEvent, screen } from '@testing-library/react';
 import App from './App';
 
@@ -19,7 +20,7 @@ const mockItemsArray = [{
     tags: ['something-else', 'some tag']
 }];
 
-beforeEach(() => {
+beforeAll(() => {
   jest.mock('./languages.json', () =>
     mockItemsArray
   );
@@ -28,21 +29,21 @@ beforeEach(() => {
 
 
 describe('An App component', () => {
+  beforeEach(() => {
+    render(<MemoryRouter><App /></MemoryRouter>);
+  });
+
   it('contains a form', () => {
-    render(<App />);
     expect(screen.getByRole('form')).toBeInTheDocument();
   });
 
   it('does not show a timeline, if not requested', () => {
-    render(<App />);
     screen.queryAllByRole('list').forEach(renderedList => {
       expect(renderedList).not.toHaveClass('Timeline');
     });
   });
 
   it('shows a timeline of items, upon request', async () => {
-    render(<App />);
-
     fireEvent.click(screen.getByText('Update'));
     await screen.getAllByRole('list');
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import TimelineItem from './TimelineItem';
 
@@ -9,17 +10,21 @@ const mockItem = {
   tags: ['SomeLanguage', 'some-tag', 'some other tag']
 };
 
-describe('', () => {
+describe('A TimelineItem component', () => {
   beforeEach(() => {
-    render(<TimelineItem
-        name={mockItem.name}
-        birth={mockItem.birth}
-        tags={mockItem.tags}
-        side='left'
-      />);
+    render(
+      <MemoryRouter>
+        <TimelineItem
+          name={mockItem.name}
+          birth={mockItem.birth}
+          tags={mockItem.tags}
+          side='left'
+        />
+      </MemoryRouter>
+    );
   });
 
-  test('renders a TimelineItem', () => {
+  test('has class TimelineItem', () => {
     const timelineItem = screen.getAllByRole('listitem')[0];
     expect(timelineItem).toHaveClass('TimelineItem');
   });

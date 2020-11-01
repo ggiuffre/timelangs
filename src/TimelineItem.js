@@ -1,25 +1,29 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Timeline.css';
 import './TimelineItem.css';
 
 function TimelineItem(props) {
-  const [detailsVisible, setDetailsVisible] = useState(false);
-  const toggleDetails = () => setDetailsVisible(!detailsVisible);
+  // const [detailsVisible, setDetailsVisible] = useState(false);
+  // const toggleDetails = () => setDetailsVisible(!detailsVisible);
 
   const tags = <ul className='tagsList'>{
-      props.tags.map(tag => <li key={tag}>{tag}</li>)
+      props.tags.map(
+        tag => <li key={tag}><Link to={`/${tag}`}>{tag}</Link></li>
+      )
     }</ul>;
 
   const classes = [
     'TimelineItem',
     props.type,
     props.side,
-    detailsVisible ? 'detailed' : ''
+    'detailed'
+    // detailsVisible ? 'detailed' : ''
   ].join(' ');
 
   return <li
     className={classes}
-    onClick={toggleDetails}
+    // onClick={toggleDetails}
     >
     <span className='content'>
       {props.name} ({props.birth})

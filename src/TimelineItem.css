@@ -110,6 +110,15 @@
   }
 }
 
+.tagsList a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.tagsList a:visited {
+  color: var(--primary-color-darker);
+}
+
 /* single tag */
 .TimelineItem .tagsList > li {
   display: inline;
