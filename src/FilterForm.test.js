@@ -3,8 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import FilterForm from './FilterForm';
 
-describe('A FilterForm component', () => {
-  const mockTags = [
+const mockTags = [
     'SomeLanguage',
     'OOP',
     'arrays',
@@ -13,29 +12,48 @@ describe('A FilterForm component', () => {
     'BNF'
   ];
 
-  beforeEach(() => {
-    render(
-      <MemoryRouter>
-        <FilterForm
-          tags={mockTags}
-          topic=''
-          updateTopic={() => {}}
-          updateTimeline={() => {}}
-          fullPage={true}
-        />
-      </MemoryRouter>
-    );
+const renderForm = ({ fullPage }) => render(
+  <MemoryRouter>
+    <FilterForm
+      tags={mockTags}
+      topic=''
+      updateTopic={() => {}}
+      updateTimeline={() => {}}
+      fullPage={fullPage}
+    />
+  </MemoryRouter>
+);
+
+describe('A FilterForm component', () => {
+  describe('in full-page mode', () => {
+    beforeEach(() => renderForm({ fullPage: true }));
+
+    it('renders a form', () => {
+      expect(screen.getByRole('form')).toBeInTheDocument();
+    });
+
+    it('renders a search bar', () => {
+      expect(screen.getByRole('combobox')).toBeInTheDocument();
+    });
+
+    it('renders a button to update the timeline', () => {
+      expect(screen.getByRole('button')).toBeInTheDocument();
+    });
   });
 
-  it('renders a form, when in full-page', () => {
-    expect(screen.getByRole('form')).toBeInTheDocument();
-    expect(screen.getByRole('combobox')).toBeInTheDocument();
-    expect(screen.getByRole('button')).toBeInTheDocument();
-  });
+  describe('not in full-page mode', () => {
+    beforeEach(() => renderForm({ fullPage: false }));
 
-  it('renders a form, when not in full-page', () => {
-    expect(screen.getByRole('form')).toBeInTheDocument();
-    expect(screen.getByRole('combobox')).toBeInTheDocument();
-    expect(screen.getByRole('button')).toBeInTheDocument();
+    it('renders a form', () => {
+      expect(screen.getByRole('form')).toBeInTheDocument();
+    });
+
+    it('renders a search bar', () => {
+      expect(screen.getByRole('combobox')).toBeInTheDocument();
+    });
+
+    it('renders a button to update the timeline', () => {
+      expect(screen.getByRole('button')).toBeInTheDocument();
+    });
   });
 });

@@ -5,14 +5,14 @@ import App from './App';
 
 const mockItemsArray = [{
     _id: 123,
-    name: 'SomeLibrary',
+    name: 'SomeLanguage',
     birth: 1861,
-    tags: ['SomeLibrary', 'libraries', 'some other tag']
+    tags: ['SomeLanguage', 'OOP', 'arrays']
   }, {
     _id: 456,
     name: 'Some Language',
     birth: 1860,
-    tags: ['Some Language', 'languages', 'some other tag']
+    tags: ['Some Language', 'whatever', 'test', 'test 2']
   }, {
     _id: 789,
     name: 'something-else',
@@ -20,17 +20,18 @@ const mockItemsArray = [{
     tags: ['something-else', 'some tag']
 }];
 
-beforeAll(() => {
-  jest.mock('./languages.json', () =>
-    mockItemsArray
-  );
-});
+const mockTags = ['SomeLanguage', 'OOP', 'arrays', 'some tag',
+  'Some Language', 'whatever', 'test', 'test 2', 'something-else'];
 
 
 
 describe('An App component', () => {
   beforeEach(() => {
-    render(<MemoryRouter><App /></MemoryRouter>);
+    render(
+      <MemoryRouter>
+        <App languages={mockItemsArray} tags={mockTags} />
+      </MemoryRouter>
+    );
   });
 
   it('contains a form', () => {

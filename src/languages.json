@@ -224,8 +224,7 @@
 		"birth": 1985,
 		"tags": ["ML", "FP", "garbage collector", "statically typed",
 			"OOP", "nominal type system", "structural type system",
-			"imperative programming", "declarative programming",
-			"statically typed"]
+			"imperative programming", "declarative programming"]
 	},
 	{
 		"name": "Oz",

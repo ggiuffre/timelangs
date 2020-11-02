@@ -3,13 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import FilterForm from './FilterForm.js';
 import Timeline from './Timeline.js';
 
-const tagsConcat = (tags, lang) => [...tags, ...lang.tags];
-const clean = array => Array.from(new Set(array));
-
-function App () {
-  const languages = require('./languages.json'); // TODO
-  const tags = clean(languages.reduce(tagsConcat, []));
-
+function App ({ languages, tags }) {
   const languagesWithTopic = useCallback(topic => {
     if (topic === '') {
       return languages;
@@ -27,11 +21,13 @@ function App () {
   const [currentTopic, setCurrentTopic] = useState('');
   const [currentLanguages, setCurrentLanguages] = useState([]);
 
+  // update state upon change in URL query parameters:
   useEffect(() => {
     setCurrentTopic(tag || '');
     setCurrentLanguages(languagesWithTopic(tag || ''));
   }, [tag, languagesWithTopic]);
 
+  // scroll to top upon change of topic:
   useEffect(() => window.scrollTo(0, 0), [currentTopic]);
 
   const updateTopic = event => setCurrentTopic(event.target.value);
