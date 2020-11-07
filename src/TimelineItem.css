@@ -14,7 +14,7 @@
   width: 25px;
   height: 25px;
   right: -12.5px;
-  background-color: var(--accent-color);
+  background-color: var(--accent);
   top: 20px;
   border-radius: 50%;
   z-index: 1;
@@ -58,7 +58,7 @@
 .content {
   padding: 3%;
   background-color: var(--material);
-  color: var(--text-color);
+  color: var(--text);
   position: relative;
   border-radius: 4px;
   display: block;
@@ -90,7 +90,7 @@
 .TimelineItem .tagsList {
   display: inline-block;
   opacity: 0;
-  color: var(--primary-color);
+  color: var(--primary);
   visibility: hidden;
   list-style: none;
   float: right;
@@ -112,11 +112,11 @@
 
 .tagsList a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
 .tagsList a:visited {
-  color: var(--primary-color-darker);
+  color: var(--primary-darker);
 }
 
 /* single tag */

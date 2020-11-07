@@ -44,7 +44,7 @@
 }
 
 #filter > #submit:hover input {
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
 /* responsive form on small screens */
