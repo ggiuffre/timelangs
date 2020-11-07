@@ -31,7 +31,7 @@ function FilterForm({
       {options}
     </datalist>
 
-    <label>
+    <label id='submit'>
       <input type='submit' value='Update' />
     </label>
   </form>;

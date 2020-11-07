@@ -7,7 +7,7 @@
   --text-color: black;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background-color: #212121;
     --primary-color: #5B5;

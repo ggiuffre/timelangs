@@ -2,8 +2,7 @@
 #filter {
   background-color: rgba(0, 0, 0, 0.12);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
-  transition: padding-top 0.4s;
-  text-align: center;
+  transition: padding 0.4s;
   padding: 2em 8%;
 }
 
@@ -11,15 +10,17 @@
 #filter.fullpage {
   background-color: transparent;
   box-shadow: none;
-  position: absolute;
-  padding: 8%;
-  margin: 0;
-  width: 84%;
 }
 
 /* fancy golden ratio on wide screens! */
 @media screen and (min-width: 900px) {
+  #filter {
+    text-align: center;
+    width: 84%;
+  }
+
   #filter.fullpage {
+    position: absolute;
     padding-top: 62vh;
   }
 }
@@ -30,7 +31,6 @@
   padding: 1%;
   margin: 1%;
   border-radius: 3px;
-  text-align: initial;
 }
 
 #filter > label > input {
@@ -43,16 +43,33 @@
   padding-left: 0.4em;
 }
 
+#filter > #submit:hover input {
+  color: var(--primary-color);
+}
+
 /* responsive form on small screens */
 @media screen and (max-width: 900px) {
   #filter {
-    padding: 2%;
+    padding: 3%;
+  }
+
+  #filter.fullpage {
+    padding-bottom: 4em;
   }
 
   #filter > label {
+    transition: margin 0.4s;
     display: inline-block;
     margin: 0.5em 0.5%;
     width: 92%;
     padding: 4%;
+  }
+
+  #filter.fullpage > label {
+    margin-bottom: 1.5em;
+  }
+
+  #filter #submit input {
+    padding-left: 0;
   }
 }
