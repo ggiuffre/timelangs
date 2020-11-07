@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import FilterForm from './FilterForm.js';
-import Timeline from './Timeline.js';
+import FilterForm from './FilterForm';
+import Timeline from './Timeline';
 
 function App ({ languages, tags }) {
   const { tag } = useParams();

@@ -1,5 +1,5 @@
 import React from 'react';
-import TimelineItem from './TimelineItem.js';
+import TimelineItem from './TimelineItem';
 import './Timeline.css';
 
 function Timeline({ items }) {
