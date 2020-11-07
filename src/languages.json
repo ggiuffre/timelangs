@@ -20,8 +20,7 @@
 	{
 		"name": "Bash",
 		"birth": 1989,
-		"tags": ["Shell", "scripting", "text manipulation",
-			"imperative programming"]
+		"tags": ["scripting", "text manipulation", "imperative programming"]
 	},
 	{
 		"name": "BCPL",
@@ -64,7 +63,7 @@
 	{
 		"name": "COBOL",
 		"birth": 1959,
-		"tags": ["COBOL", "ISO standard", "nominal type system",
+		"tags": ["ISO standard", "nominal type system",
 			"imperative programming", "statically typed"]
 	},
 	{
@@ -77,7 +76,7 @@
 	{
 		"name": "Coq",
 		"birth": 1989,
-		"tags": ["Coq", "FP", "purely functional", "declarative programming"]
+		"tags": ["FP", "purely functional", "declarative programming"]
 	},
 	{
 		"name": "CPL",
@@ -87,14 +86,14 @@
 	{
 		"name": "Dart",
 		"birth": 2011,
-		"tags": ["Dart", "web", "mobile", "garbage collector",
-			"OOP", "iOS", "Android", "nominal type system", "FP",
-			"imperative programming", "statically typed"]
+		"tags": ["web", "mobile", "garbage collector", "OOP", "FP",
+			"iOS", "Android", "nominal type system", "statically typed",
+			"imperative programming"]
 	},
 	{
 		"name": "Eiffel",
 		"birth": 1986,
-		"tags": ["Eiffel", "OOP", "nominal type system", "concurrency",
+		"tags": ["OOP", "nominal type system", "concurrency",
 			"imperative programming", "statically typed"]
 	},
 	{
@@ -106,8 +105,8 @@
 	{
 		"name": "Elm",
 		"birth": 2012,
-		"tags": ["Elm", "FP", "declarative programming", "purely functional",
-			"web", "statically typed"]
+		"tags": ["FP", "declarative programming", "purely functional", "web",
+			"statically typed"]
 	},
 	{
 		"name": "Erlang",
@@ -118,7 +117,7 @@
 	{
 		"name": "Fortran",
 		"birth": 1957,
-		"tags": ["Fortran", "scientific computing", "ISO standard",
+		"tags": ["scientific computing", "ISO standard",
 			"nominal type system", "imperative programming",
 			"statically typed"]
 	},
@@ -132,7 +131,7 @@
 	{
 		"name": "Go",
 		"birth": 2009,
-		"tags": ["Go", "concurrency", "OOP", "structural type system",
+		"tags": ["concurrency", "OOP", "structural type system",
 			"garbage collector", "zero-indexed", "imperative programming",
 			"statically typed"]
 	},
@@ -145,7 +144,7 @@
 	{
 		"name": "GraphQL",
 		"birth": 2015,
-		"tags": ["GraphQL", "web", "declarative programming"]
+		"tags": ["web", "declarative programming"]
 	},
 	{
 		"name": "Haskell",
@@ -191,14 +190,14 @@
 	{
 		"name": "Lua",
 		"birth": 1993,
-		"tags": ["Lua", "embedded", "garbage collector", "statically typed",
+		"tags": ["embedded", "garbage collector", "statically typed",
 			"imperative programming"]
 	},
 	{
 		"name": "MATLAB",
 		"birth": 1984,
-		"tags": ["MATLAB", "scientific computing", "OOP",
-			"imperative programming", "dynamically typed"]
+		"tags": ["scientific computing", "OOP", "dynamically typed",
+			"imperative programming"]
 	},
 	{
 		"name": "ML",
@@ -209,15 +208,14 @@
 	{
 		"name": "Nim",
 		"birth": 2008,
-		"tags": ["Nim", "scripting", "OOP", "imperative programming",
-			"FP", "zero-indexed", "off-side rule", "statically typed"]
+		"tags": ["scripting", "OOP", "imperative programming", "FP",
+			"zero-indexed", "off-side rule", "statically typed"]
 	},
 	{
 		"name": "Objective-C",
 		"birth": 1984,
-		"tags": ["Objective-C", "C", "OOP", "mobile", "iOS",
-			"zero-indexed", "nominal type system", "imperative programming",
-			"statically typed"]
+		"tags": ["C", "OOP", "mobile", "iOS", "imperative programming",
+			"zero-indexed", "nominal type system", "statically typed"]
 	},
 	{
 		"name": "OCaml",
@@ -229,7 +227,7 @@
 	{
 		"name": "Oz",
 		"birth": 1991,
-		"tags": ["Oz", "multi-paradigm", "structural type system", "FP",
+		"tags": ["multi-paradigm", "structural type system", "FP",
 			"imperative programming", "concurrency", "dataflow",
 			"declarative programming", "logic programming",
 			"dynamically typed"]
@@ -243,14 +241,14 @@
 	{
 		"name": "Perl",
 		"birth": 1987,
-		"tags": ["Perl", "scripting", "zero-indexed", "garbage collector",
+		"tags": ["scripting", "zero-indexed", "garbage collector",
 			"text manipulation", "imperative programming", "FP",
 			"dynamically typed"]
 	},
 	{
 		"name": "PHP",
 		"birth": 1995,
-		"tags": ["PHP", "scripting", "nominal type system", "zero-indexed",
+		"tags": ["scripting", "nominal type system", "zero-indexed",
 			"imperative programming", "garbage collector", "web",
 			"statically typed"]
 	},
@@ -262,20 +260,20 @@
 	{
 		"name": "Prolog",
 		"birth": 1972,
-		"tags": ["Prolog", "logic programming", "ISO standard",
-			"declarative programming", "dynamically typed"]
+		"tags": ["logic programming", "ISO standard", "dynamically typed",
+			"declarative programming"]
 	},
 	{
 		"name": "Python",
 		"birth": 1990,
-		"tags": ["Python", "scripting", "structural type system", "OOP", "FP",
+		"tags": ["scripting", "structural type system", "OOP", "FP",
 			"zero-indexed", "garbage collector", "imperative programming",
 			"off-side rule", "dynamically typed"]
 	},
 	{
 		"name": "R",
 		"birth": 1993,
-		"tags": ["R", "statistics", "scripting", "imperative programming",
+		"tags": ["statistics", "scripting", "imperative programming",
 			"FP", "scientific computing", "dynamically typed"]
 	},
 	{
@@ -287,14 +285,14 @@
 	{
 		"name": "Ruby",
 		"birth": 1995,
-		"tags": ["Ruby", "OOP", "scripting", "garbage collector", "FP",
+		"tags": ["OOP", "scripting", "garbage collector", "FP",
 			"zero-indexed", "imperative programming", "ISO standard",
 			"dynamically typed"]
 	},
 	{
 		"name": "Rust",
 		"birth": 2010,
-		"tags": ["Rust", "concurrency", "nominal type system", "FP",
+		"tags": ["concurrency", "nominal type system", "FP",
 			"imperative programming", "statically typed"]
 	},
 	{
@@ -314,18 +312,18 @@
 	{
 		"name": "Smalltalk-80",
 		"birth": 1980,
-		"tags": ["Smalltalk", "OOP", "garbage collector", "scripting",
+		"tags": ["OOP", "garbage collector", "scripting",
 			"imperative programming", "dynamically typed"]
 	},
 	{
 		"name": "SNOBOL",
 		"birth": 1962,
-		"tags": ["SNOBOL", "text manipulation", "imperative programming"]
+		"tags": ["text manipulation", "imperative programming"]
 	},
 	{
 		"name": "SQL",
 		"birth": 1974,
-		"tags": ["SQL", "databases", "query language", "ISO standard",
+		"tags": ["databases", "query language", "ISO standard",
 			"declarative programming"]
 	},
 	{
@@ -336,14 +334,14 @@
 	{
 		"name": "Swift",
 		"birth": 2014,
-		"tags": ["Swift", "OOP", "mobile", "iOS", "zero-indexed",
+		"tags": ["OOP", "mobile", "iOS", "zero-indexed",
 			"nominal type system", "structural type system",
 			"imperative programming", "statically typed"]
 	},
 	{
 		"name": "TeX",
 		"birth": 1978,
-		"tags": ["TeX", "typesetting", "markup", "imperative programming"]
+		"tags": ["typesetting", "markup", "imperative programming"]
 	},
 	{
 		"name": "TypeScript",
@@ -356,8 +354,7 @@
 	{
 		"name": "VBA",
 		"birth": 1993,
-		"tags": ["Visual Basic", "event-driven", "zero-indexed",
-			"nominal type system"]
+		"tags": ["event-driven", "zero-indexed", "nominal type system"]
 	},
 	{
 		"name": "XML",
