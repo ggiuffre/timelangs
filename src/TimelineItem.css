@@ -88,31 +88,19 @@
 
 /* list of tags to which a TimelineItem is related */
 .TimelineItem .tagsList {
-  display: inline-block;
-  opacity: 0;
-  color: var(--primary);
-  visibility: hidden;
   list-style: none;
-  float: right;
-  max-width: 16em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: visibility 0s, opacity 0.2s;
-}
-
-/* highlighted list (preview) on desktops */
-@media screen and (min-width: 900px) {
-  .TimelineItem:hover .tagsList {
-    opacity: 1;
-    visibility: visible;
-    transition: visibility 0s, opacity 0.2s;
-  }
+  max-width: 90%;
+  margin: 3% 0 0 0;
+  text-align: right;
 }
 
 .tagsList a {
   text-decoration: none;
   color: var(--primary);
+}
+
+.tagsList a:hover {
+  text-decoration: underline;
 }
 
 .tagsList a:visited {
@@ -121,7 +109,7 @@
 
 /* single tag */
 .TimelineItem .tagsList > li {
-  display: inline;
+  display: inline-block;
   margin: auto auto auto 0.6em;
 }
 
@@ -129,24 +117,4 @@
 .TimelineItem .tagsList > li::before {
   content: '#';
   color: #555;
-}
-
-/* clicked list (complete) */
-.TimelineItem.detailed .tagsList {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  max-width: 90%;
-  float: none;
-  margin: 3% 0 0 0;
-  text-align: right;
-  overflow: initial;
-  text-overflow: initial;
-  white-space: initial;
-  transition: margin 0.2s;
-}
-
-/* non-breakable elements for a multi-line list */
-.TimelineItem.detailed .tagsList li {
-  display: inline-block;
 }

@@ -4,9 +4,6 @@ import './Timeline.css';
 import './TimelineItem.css';
 
 function TimelineItem(props) {
-  // const [detailsVisible, setDetailsVisible] = useState(false);
-  // const toggleDetails = () => setDetailsVisible(!detailsVisible);
-
   const tags = <ul className='tagsList'>{
       props.tags.map(
         tag => <li key={tag}><Link to={tag}>{tag}</Link></li>
@@ -17,14 +14,9 @@ function TimelineItem(props) {
     'TimelineItem',
     props.type,
     props.side,
-    'detailed'
-    // detailsVisible ? 'detailed' : ''
   ].join(' ');
 
-  return <li
-    className={classes}
-    // onClick={toggleDetails}
-    >
+  return <li className={classes}>
     <span className='content'>
       {props.name} ({props.birth})
       {tags}
