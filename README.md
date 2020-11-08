@@ -34,7 +34,7 @@ This is a simple React app with only four components:
   and birth year of a language, together with a list of topics that can be
   associated to this language.
 
-Currently the app is static (doesn't make any network request).
+Currently the app is static (doesn't make any network requests).
 
-Test the app with `yarn start`, run it locally with `yarn start`, or try live
+Test the app with `yarn test`, run it locally with `yarn start`, or try live
 at [ggiuffre.github.io/timelangs](https://ggiuffre.github.io/timelangs).
