@@ -9,7 +9,7 @@ function TimelineItem(props) {
 
   const tags = <ul className='tagsList'>{
       props.tags.map(
-        tag => <li key={tag}><Link to={`/${tag}`}>{tag}</Link></li>
+        tag => <li key={tag}><Link to={tag}>{tag}</Link></li>
       )
     }</ul>;
 

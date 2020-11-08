@@ -23,7 +23,7 @@ function App ({ languages, tags }) {
     if (event) event.preventDefault();
 
     // update the browser history with a new URL:
-    history.push(`/${currentTopic}`);
+    history.push(currentTopic);
 
     // minimize the topic form after its first use:
     if (topicFormFullPage) setTopicFormFullPage(false);
