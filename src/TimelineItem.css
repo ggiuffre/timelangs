@@ -1,3 +1,8 @@
+:root {
+  --point-size: 25px;
+  --point-offset: calc(var(--point-size) * (-1 / 2));
+}
+
 /* container around the content */
 .TimelineItem {
   list-style: none;
@@ -11,11 +16,11 @@
 .TimelineItem::after {
   content: '';
   position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -12.5px;
+  width: var(--point-size);
+  height: var(--point-size);
+  right: var(--point-offset);
   background-color: var(--accent);
-  top: 20px;
+  top: calc(32px + var(--point-offset));
   border-radius: 50%;
   z-index: 1;
 }
@@ -51,7 +56,7 @@
 
 /* fix the circle for containers on the right side */
 .right::after {
-  left: -12.5px;
+  left: var(--point-offset);
 }
 
 /* the actual content */
