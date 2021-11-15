@@ -27,7 +27,7 @@
 
 /* the (labelled) elements in the form */
 #filter > label {
-  background-color: white;
+  background-color: var(--white);
   padding: 1%;
   margin: 1%;
   border-radius: 3px;

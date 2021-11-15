@@ -1,10 +1,12 @@
 :root {
+  --white: #EEE;
+
   --background: #5B5;
   --primary: var(--background);
   --primary-darker: #060;
-  --accent: white;
-  --material: white;
-  --text: black;
+  --accent: var(--white);
+  --material: var(--white);
+  --text: #212121;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,7 +16,7 @@
     --primary-darker: #1A1;
     --accent: #6B6;
     --material: rgba(255, 255, 255, 0.12);
-    --text: white;
+    --text: var(--white);
   }
 }
 
