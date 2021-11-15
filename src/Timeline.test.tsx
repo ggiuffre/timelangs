@@ -7,21 +7,18 @@ const mockItemsArray = [
   {
     _id: 123,
     name: 'SomeLibrary',
-    type: 'library',
     birth: 1861,
     tags: ['SomeLibrary', 'libraries', 'some other tag']
   },
   {
     _id: 456,
     name: 'Some Language',
-    type: 'language',
     birth: 1860,
     tags: ['Some Language', 'languages', 'some other tag']
   },
   {
     _id: 789,
     name: 'something-else',
-    type: 'other',
     birth: 1999,
     tags: ['something-else', 'some tag']
   }

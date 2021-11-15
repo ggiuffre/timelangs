@@ -1,14 +1,18 @@
 import React from 'react';
 import TimelineItem from './TimelineItem';
 import './Timeline.css';
+import type { LanguageEntry } from './types';
 
-function Timeline({ items }) {
-  const decoratedItem = (data, index = 0) => {
+interface TimelineProps {
+  readonly items: LanguageEntry[];
+}
+
+const Timeline: React.FC<TimelineProps> = ({ items }) => {
+  const decoratedItem = (data: LanguageEntry, index: number = 0) => {
     const side = index % 2 ? 'left' : 'right';
     return <TimelineItem
       key={data.name}
       name={data.name}
-      type={data.type}
       birth={data.birth}
       tags={data.tags}
       side={side}
@@ -20,6 +24,6 @@ function Timeline({ items }) {
     .map(decoratedItem);
 
   return <ul className='Timeline'>{decoratedItems}</ul>;
-}
+};
 
 export default Timeline;

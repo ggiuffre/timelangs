@@ -12,7 +12,7 @@ const mockTags = [
     'BNF'
   ];
 
-const renderForm = ({ fullPage }) => render(
+const renderForm = ({ fullPage }: { fullPage: boolean; }) => render(
   <MemoryRouter>
     <FilterForm
       tags={mockTags}

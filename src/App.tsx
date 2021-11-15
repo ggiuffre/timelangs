@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import React, { useState, useEffect, ChangeEventHandler, FormEventHandler } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import FilterForm from './FilterForm';
 import Timeline from './Timeline';
+import type { LanguageEntry } from './types';
 
-function App ({ languages, tags }) {
+interface AppProps {
+  readonly languages: LanguageEntry[];
+  readonly tags: string[];
+}
+
+const App: React.FC<AppProps> = ({ languages, tags }) => {
   const { tag } = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [topicFormFullPage, setTopicFormFullPage] = useState(!tag);
   const [currentTopic, setCurrentTopic] = useState(''); // controls FilterForm
@@ -16,14 +22,15 @@ function App ({ languages, tags }) {
     setCurrentTopic(tag || '');
   }, [tag]);
 
-  const updateTopic = event => setCurrentTopic(event.target.value);
+  const updateTopic: ChangeEventHandler<HTMLInputElement> = (event) =>
+    setCurrentTopic(event.target?.value ?? '');
 
-  const updateTimeline = event => {
+  const updateTimeline: FormEventHandler<HTMLFormElement> = (event) => {
     // avoid refreshing the page:
     if (event) event.preventDefault();
 
     // update the browser history with a new URL:
-    history.push(currentTopic);
+    navigate(`../${currentTopic}`, { replace: true });
 
     // minimize the topic form after its first use:
     if (topicFormFullPage) setTopicFormFullPage(false);
@@ -43,10 +50,10 @@ function App ({ languages, tags }) {
   const timeline = topicFormFullPage ? '' :
     <Timeline items={currentLanguages} />;
 
-  return <React.Fragment>
+  return <>
     {filterForm}
     {timeline}
-  </React.Fragment>;
-}
+  </>;
+};
 
 export default App;

@@ -26,6 +26,15 @@ const mockTags = ['SomeLanguage', 'OOP', 'arrays', 'some tag',
 
 
 describe('An App component', () => {
+  const windowScroll = global.window.scroll;
+  beforeAll(() => {
+    global.window.scroll = () => {};
+  });
+
+  afterAll(() => {
+    global.window.scroll = windowScroll;
+  });
+
   beforeEach(() => {
     render(
       <MemoryRouter>
@@ -44,9 +53,9 @@ describe('An App component', () => {
     });
   });
 
-  it('shows a timeline of items, upon request', async () => {
+  it('shows a timeline of items, upon request', () => {
     fireEvent.click(screen.getByText('Update'));
-    await screen.getAllByRole('list');
+    screen.getAllByRole('list');
 
     expect(screen.getAllByRole('list')[0]).toBeInTheDocument();
     expect(screen.getAllByRole('list')[0]).toHaveClass('Timeline');

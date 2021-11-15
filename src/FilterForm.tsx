@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { ChangeEventHandler, FormEventHandler } from 'react';
 import './FilterForm.css';
 
-function FilterForm({
+interface FilterFormProps {
+  readonly tags: string[];
+  readonly topic: string;
+  readonly fullPage: boolean;
+  readonly updateTopic: ChangeEventHandler<HTMLInputElement>;
+  readonly updateTimeline: FormEventHandler<HTMLFormElement>;
+}
+
+const FilterForm: React.FC<FilterFormProps> = ({
   tags,
   topic,
   fullPage,
   updateTopic,
   updateTimeline
-}) {
+}) => {
   const options = tags
-    .map(tag => <option value={tag} key={tag} />)
-    .sort((a, b) => a.key.localeCompare(b.key));
+    .sort((a, b) => a.localeCompare(b))
+    .map(tag => <option value={tag} key={tag} />);
 
   return <form
       className={fullPage ? 'fullpage' : ''}
@@ -19,7 +27,7 @@ function FilterForm({
       onSubmit={updateTimeline}
     >
     <label id='topic'>Topic: <input
-        tabIndex='1'
+        tabIndex={1}
         type='text'
         value={topic}
         onChange={updateTopic}
@@ -35,6 +43,6 @@ function FilterForm({
       <input type='submit' value='Update' />
     </label>
   </form>;
-}
+};
 
 export default FilterForm;
